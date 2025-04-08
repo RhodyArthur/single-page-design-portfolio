@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 :root {
     /* colors */
     --cream: #FFF7F0;
@@ -26,10 +28,12 @@
 
 body {
     background-color: var(--cream);
+    color: var(--black);
     padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 button {
@@ -40,9 +44,22 @@ button {
     padding: 0.8125rem 1.75rem;
     border: 1px solid transparent;
     outline: none;
+    cursor: pointer;
 }
 
-header {
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.align-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header, footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,50 +70,40 @@ header img {
     height: 3rem;
 }
 
-header button {
+header button, footer button {
     background-color: var(--black);
 }
 
 main {
-    border: 1px solid blue;
-    display: flex;
-    flex-direction: column;
     gap: 6.25rem;
 }
 
 main .col {
-    display: flex;
-    flex-direction: column;
     gap: 2rem;
 }
 
 .text__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
     text-align: center;
     padding-inline: 29px;
 }
 
 .text__container h1 {
-    font-size: 2.25rem;
-    color: var(--black);
+    font-size: 35px;
 }
 
 .text__container .description {
     font-size: 1rem;
     color: var(--brown);
+    line-height: 26px;
+    width: 17.8125rem;
 }
 
 .design__cards {
-    display: flex;
-    flex-direction: column;
     gap: 1.5rem;
 }
 
-.card {
+.col__1 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -165,3 +172,70 @@ main .col {
     background-color: var(--purple);
 }
 
+.bottom__container {
+    gap: 2.5rem;
+}
+
+.inner__container {
+    gap: 6.25rem;
+}
+
+.profile, .work {
+    gap: 2rem;
+}
+
+.profile img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.profile__details {
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.profile__details h3 {
+    font-size: 1.625rem;
+}
+
+.profile__details p {
+    font-size: 1rem;
+    color: var(--brown);
+}
+
+.profile__details button, .book button {
+    background-color: var(--red);
+}
+
+.work h4 {
+    font-size: 1.5rem;
+}
+
+.work .slide__show {
+    border: 1px solid green;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.controls .btn {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book {
+    gap: 1.5rem;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    border-radius: 0.75rem;
+    background-color: var(--black);
+    color: var(--cream);
+}

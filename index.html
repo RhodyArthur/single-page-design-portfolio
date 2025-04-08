@@ -13,25 +13,25 @@
         <button>Free Consultation</button>
     </header>
 
-    <main>
-        <div class="col">
-            <section class="text__container">
+    <main class="flex-column">
+        <div class="col flex-column">
+            <section class="text__container align-center">
                 <h1>Design solutions made easy</h1>
                 <p class="description">With over ten years of experience in various design disciplines,
                     I’m your one-stop shop for your design needs.
                 </p>
             </section>
     
-            <section class="design__cards">
+            <section class="design__cards flex-column">
 
-                <section class="col__1">
+                <section class="col__1 flex-column">
 
                     <div class="card graphics">
                         <img src="assets/pattern-graphic-design.svg" alt="graphics image">
                         <p class="name">Graphic Design</p>
                     </div>
     
-                    <section class="grouped__cards">
+                    <section class="grouped__cards flex-column">
                         <div class="col__2">
 
                             <div class="card ui">
@@ -68,13 +68,64 @@
             </section>
         </div>
 
-        <section class="profile">
-            <img src="assets/image-amy.webp" alt="profile image">
+        <div class="bottom__container flex-column">
+            <div class="inner__container flex-column">
 
-            <div class="profile__details">
+                <section class="profile align-center">
+                    <img src="assets/image-amy.webp" alt="profile image">
+        
+                    <div class="profile__details align-center">
+                        <h3>I’m Amy, and I’d love to work on your next project</h3>
+        
+                        <p>
+                            I love working with others to create beautiful design solutions.
+                            I’ve designed everything from brand illustrations to complete mobile apps.
+                            I’m also handy with a camera!
+                        </p>
+        
+                        <button>Free Consultation</button>
+                    </div>
+                </section>
+    
+                <section class="work align-center">
+                    <h4>My Work</h4>
 
+                    <div class="slide__show">
+                        <img src="assets/image-slide-1.jpg" alt="image">
+                        <img src="assets/image-slide-2.jpg" alt="image">
+                        <img src="assets/image-slide-3.jpg" alt="image">
+                        <img src="assets/image-slide-4.jpg" alt="image">
+                        <img src="assets/image-slide-5.jpg" alt="image">
+                    </div>
+
+                    <div class="controls">
+                        <div class="btn">
+                            <img src="assets/icon-arrow-left.svg" alt="left arrow icon">
+                        </div>
+                        <div class="btn">
+                            <img src="assets/icon-arrow-right.svg" alt="left arrow icon">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="book align-center">
+                    <h3>Book a call with me</h3>
+
+                    <p>I’d love to have a chat to see how I can help you.
+                        The best first step is for us to discuss your project during a free consultation.
+                        Then we can move forward from there.
+                    </p>
+
+                    <button>Free consultation</button>
+                </section>
             </div>
-        </section>
+
+            <footer>
+                <img src="assets/logo.svg" alt="logo">
+
+                <button>Free Consultation</button>
+            </footer>
+        </div>
 
     </main>
 </body>

@@ -103,11 +103,16 @@ main .col {
     width: 17.8125rem;
 }
 
+.grid__design-cards {
+    display: grid;
+    gap: 1.5rem;
+}
+
 .design__cards {
     gap: 1.5rem;
 }
 
-.col__1 .card, .photography__motion .card {
+.card, .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -231,28 +236,17 @@ main .col {
 
 .work .slide__show {
     display: flex;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-}
-
-.work .slide__show-track {
-    display: flex;
-    animation: slideLeft 25s linear infinite;
-    width: calc(100% * 10);
-}
-
-.work .slide__show-track img {
+    gap: 15px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
     width: 100%;
 }
 
-@keyframes slideLeft {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-500%);
-    }
+.work .slide__show img {
+    width: 16.875rem;
+    height: 11.25rem;
+    border-radius: 0.75rem;
 }
 
 .controls {
@@ -344,6 +338,13 @@ main .col {
         align-items: flex-start;
         text-align: left;
     }
+    .work .slide__show {
+        gap: 30px;
+    }
+    .work .slide__show img {
+        width: 33.75rem;
+        height: 22.5rem;
+    }
 
     .inner__container {
         gap: 7.5rem;
@@ -374,23 +375,26 @@ main .col {
         width: 100%;
     }
 
-    .grouped__cards {
-        width: 100%;
+    .illustrations {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        height: 170px;
     }
 
-    .col__2 {
+    .grouped__cards, .col__2, .graphics {
         flex: 1;
-        width: 100%;
     }
 
-    .col__1, .photography__motion {
-        flex: 1;
+    .col__1 {
+        flex: 2;
     }
 
     .photography__motion {
+        flex: 1;
         flex-direction: column;
     }
 
-    
-    
+    .motion, .photography {
+        height: 158px;
+    }   
 }

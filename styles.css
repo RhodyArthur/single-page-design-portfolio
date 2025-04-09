@@ -47,6 +47,10 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    background-color: var(--galactic-blue);
+}
+
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -103,7 +107,7 @@ main .col {
     gap: 1.5rem;
 }
 
-.col__1 .card {
+.col__1 .card, .photography__motion .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -112,17 +116,20 @@ main .col {
     color: var(--white);
     font-size: 1.5rem;
     font-weight: 600;
-    width: 100%;
 }
 
 .card img {
     align-self: flex-end;
 }
 
-.col__1, .col__1 .grouped__cards {
+.col__1, .col__1 .grouped__cards, .photography__motion {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+.photography__motion {
+    width: 100%;
 }
 
 .col__2 {
@@ -130,12 +137,14 @@ main .col {
     justify-content: space-between;
     gap: 1.5rem;
     height: 11.375rem;
+    width: 100%;
 }
 
 
 .graphics {
     background-color: var(--galactic-blue);
     height: 22.75rem;
+    width: 100%;
 }
 
 .graphics img {
@@ -145,6 +154,7 @@ main .col {
 
 .ui {
     background-color: var(--summer-yellow);
+    flex: 1;
 }
 
 .ui img, .apps img{
@@ -154,14 +164,17 @@ main .col {
 
 .apps {
     background-color: var(--pink);
+    flex: 1;
 }
 
 .illustrations {
     background-color: var(--red);
+    height: 9.875rem;
 }
 
 .photography, .motion {
     height: 11.375rem;
+    /* flex: 1; */
 }
 
 .photography {
@@ -208,6 +221,10 @@ main .col {
     background-color: var(--red);
 }
 
+.profile__details button:hover, .book button:hover {
+    background-color: var(--summer-yellow);
+}
+
 .work h4 {
     font-size: 1.5rem;
 }
@@ -227,7 +244,6 @@ main .col {
 
 .work .slide__show-track img {
     width: 100%;
-    flex-shrink: 0;
 }
 
 @keyframes slideLeft {
@@ -254,6 +270,11 @@ main .col {
     align-items: center;
 }
 
+.controls .btn:hover {
+    background-color: var(--galactic-blue);
+    cursor: pointer;
+}
+
 .book {
     gap: 1.5rem;
     padding: 3rem 1.5rem;
@@ -261,4 +282,115 @@ main .col {
     border-radius: 0.75rem;
     background-color: var(--black);
     color: var(--cream);
+}
+
+.book h3 {
+    font-size: 26px;
+}
+
+
+/* media queries */
+@media only screen and (min-width: 768px){
+    body {
+        padding: 2.125rem 2.5rem;
+        gap: 4rem;
+    }
+
+    main {
+        gap: 7.5rem;
+    }
+
+    .text__container {
+        padding-inline: 3.625rem;
+        gap: 1.6875rem;
+    }
+    
+    .text__container h1 {
+        font-size: 2.65rem;
+    }
+
+    .text__container .description {
+        width: 573px;
+        padding-inline: 1.5rem;
+    }
+
+    main .col {
+        gap: 4rem;
+    }
+
+    .col__1, .photography__motion {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+   
+
+    .grouped__cards, .graphics {
+        width: 50%;
+    }
+
+    .photography, .motion {
+        flex: 1;
+    }
+
+    .profile {
+        flex-direction: row;
+    }
+
+    .profile, .work, .bottom__container {
+        gap: 3.5rem;
+    }
+
+    .profile__details {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .inner__container {
+        gap: 7.5rem;
+    }
+
+    .book {
+        padding: 56px 75px;
+    }
+
+    .book h3 {
+        font-size: 2rem;
+    }
+
+    .book p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        margin-inline: auto;
+        padding: 34px 165px;
+    }
+
+    .design__cards {
+        flex-direction: row;
+        height: 22.75rem;
+        width: 100%;
+    }
+
+    .grouped__cards {
+        width: 100%;
+    }
+
+    .col__2 {
+        flex: 1;
+        width: 100%;
+    }
+
+    .col__1, .photography__motion {
+        flex: 1;
+    }
+
+    .photography__motion {
+        flex-direction: column;
+    }
+
+    
+    
 }
